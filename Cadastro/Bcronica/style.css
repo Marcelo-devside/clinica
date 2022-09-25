@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#box{
+    display: flex;
+    justify-content: center;
+    padding: 10px 3px 10px 3px;
+    background-color: black;
+}
+#title{
+    color: white;
+    font-size: 3vw;
+    font-family: 'Roboto', sans-serif;
+}
+#menu-popup{
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 30px;
+}
+.barra-lateral{
+    position: relative;
+    max-width: 17vw;
+    min-width: 300px;
+    min-height: 400px;
+    max-height: 50vh;
+    height: 60vh;
+    background-color: gray;
+    margin-left: -385px;
+}
+#box-align{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+#menu-close{
+    position: absolute;
+    width: 30px;
+}
+#ficha{
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+.h3-links{
+    margin-left: 30px;
+    /* padding-top: 60px; */
+    padding-top: 5vh;
+}
+.a-links{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+.menu-show{
+    animation: movingMenu 0.3s;
+    margin-left: 0px;
+}
+@keyframes movingMenu {
+    0%{
+        margin-left: -385px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+.closedMenu{
+    animation: movingMenuClose 0.3s;
+    margin-left: -385px;
+
+}
+@keyframes movingMenuClose {
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: -385px;
+    }
+}
