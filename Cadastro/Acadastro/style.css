@@ -1,19 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Space+Grotesk:wght@300;500;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #1C1C26;
+    overflow: hidden;
+}
+.img-background2{
+    position: absolute;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
 #box{
     display: flex;
     justify-content: center;
-    padding: 10px 3px 10px 3px;
-    background-color: black;
+    background-color: #f19408;
+    padding-bottom: 20px;
 }
 #title{
-    color: white;
-    font-size: 3vw;
+    color: #000;
+    font-size: 4vw;
     font-family: 'Roboto', sans-serif;
+    padding-top: 20px;
 }
 #menu-popup{
     position: fixed;
@@ -28,7 +40,9 @@
     min-height: 400px;
     max-height: 50vh;
     height: 60vh;
-    background-color: gray;
+    background-color: #362d402c;
+    border: solid 1px #77737321;
+    backdrop-filter: blur(50px);
     margin-left: -385px;
 }
 #box-align{
@@ -44,9 +58,10 @@
 #ficha{
     text-align: center;
     padding-top: 50px;
-    font-family: 'Roboto', sans-serif;
-
-
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color:#fff;
 }
 .h3-links{
     margin-left: 30px;
@@ -54,10 +69,12 @@
     padding-top: 5vh;
 }
 .a-links{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 11px;
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 .menu-show{
     animation: movingMenu 0.3s;
