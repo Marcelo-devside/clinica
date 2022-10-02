@@ -41,8 +41,8 @@ body{
     min-height: 400px;
     max-height: 50vh;
     height: 60vh;
-    background-color: #362d402c;
-    border: solid 1px #777373a1;
+    background-color: #362d408c;
+    border: solid 1px #868383a1;
     backdrop-filter: blur(200px);
     margin-left: -385px;
 }
