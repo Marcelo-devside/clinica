@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 body{
+    background-color: #1C1C26;
     overflow: hidden;
 }
 .img-background{
@@ -36,11 +37,11 @@ body{
     max-width: 17vw;
     min-width: 300px;
     min-height: 400px;
-    max-height: 70vh;
-    height: 70vh;
+    max-height: 65vh;
+    height: 65vh;
     background-color: #362d402c;
-    border: solid 1px #77737321;
-    backdrop-filter: blur(50px);
+    border: solid 1px #777373a1;
+    backdrop-filter: blur(200px);
     margin-left: -385px;
 }
 #box-align{
