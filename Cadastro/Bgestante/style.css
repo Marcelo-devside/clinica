@@ -41,10 +41,14 @@ body{
     min-height: 400px;
     max-height: 50vh;
     height: 60vh;
-    background-color: #362d408c;
+    background-color: #362d4063;
     border: solid 1px #868383a1;
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(1.35rem);
     margin-left: -385px;
+    border-top-style: none;
+    border-left-style: none;
+    border-bottom-right-radius: 10px;
+    z-index: 250;
 }
 #box-align{
     display: flex;
