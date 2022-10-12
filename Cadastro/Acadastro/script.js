@@ -1,7 +1,7 @@
 const showMenu = document.querySelector('#menu-popup')
 const closeMenu = document.querySelector('#menu-close')
 const labelCpf = document.querySelector('.label-cpf')
-const cpfId = document.querySelector('#cpf-id')
+const cpfId = document.querySelector('.cpf-id')
 const barraLateral = document. querySelector('.barra-lateral')
 const verificado = document.querySelector('#verific')
 const errorDetect = document.querySelector('#error-detect')
