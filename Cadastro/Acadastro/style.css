@@ -11,6 +11,7 @@
 }
 body{
     background-color: #1C1C26;
+    overflow: hidden;
 }
 .img-background2{
     position: fixed;
@@ -246,16 +247,18 @@ body{
 }
 @media screen and ( max-width: 413px) {
     .label-cpf, .span-cpf__islater{
-        margin-top: 65px;
+        margin-top: 52px;
     }
     .span-cpf__islater{
-        margin-top: 40px;
+        margin-top: 29px;
     }
     #verific {
-        margin-left: 218px;
+        margin-left: 170px;
+        margin-top: 7.8vh;
     }
     #error-detect{
-        margin-left: 218px;
+        margin-left: 170px;
+        margin-top: 7.8vh;
     }
     @keyframes animateClick {
         0%{
