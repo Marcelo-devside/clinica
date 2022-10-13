@@ -184,7 +184,7 @@ body{
 }
 #verific {
     position: absolute;
-    margin-left: 215px;
+    margin-left: 170px;
     margin-top: 7.5vh;
     width: 17px;
     display: none;
@@ -192,7 +192,7 @@ body{
 }
 #error-detect{
     position: absolute;
-    margin-left: 215px;
+    margin-left: 170px;
     margin-top: 7.5vh;
     width: 18px;
     display: none;
@@ -247,10 +247,12 @@ body{
 }
 @media screen and ( max-width: 413px) {
     .label-cpf, .span-cpf__islater{
-        margin-top: 52px;
+        margin-top: 66px;
+        animation: animateClickOut2 70ms linear;
     }
     .span-cpf__islater{
-        margin-top: 29px;
+        margin-top: 43px;
+        animation: animateClick2 50ms linear;
     }
     #verific {
         margin-left: 170px;
@@ -260,27 +262,27 @@ body{
         margin-left: 170px;
         margin-top: 7.8vh;
     }
-    @keyframes animateClick {
+    @keyframes animateClick2 {
         0%{
-            margin-top: 65px;
+            margin-top: 66px;
             transform: scale(1);
             color: rgb(189, 186, 186);
         } 50%{
             transform: scale(0.8);
             color: rgb(189, 186, 186);
         } 100%{
-            margin-top: 55px;
+            margin-top: 43px;
             transform: scale(0.7);
         }
     }
-    @keyframes animateClickOut {
+    @keyframes animateClickOut2 {
         0%{
-            margin-top: 55px;
+            margin-top: 43px;
             transform: scale(0.7);
         } 50%{
             transform: scale(0.9);
         } 100%{
-            margin-top: 65px;
+            margin-top: 66px;
             transform: scale(1);
         }
     }
