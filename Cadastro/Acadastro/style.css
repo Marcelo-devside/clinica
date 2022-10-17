@@ -12,7 +12,7 @@
 
 body{
     background-color: #1C1C26;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .img-background2{
     position: fixed;
@@ -122,10 +122,10 @@ body{
 #idCitizen-section{
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: relative;
     width: 100vw;
     height: 60vh;
-    margin-top: -304px;
+    margin-top: -48vh;
     z-index: 2;
 }
 .align-section{
@@ -156,7 +156,7 @@ body{
 .box-align-input{
     display: flex;
     position: absolute;
-    margin-top: 18vh;
+    margin-top: 136px;
     flex-direction: column;
     max-width:60%;
     height: 60px;
@@ -185,15 +185,15 @@ body{
 }
 #verific {
     position: absolute;
-    margin-left: 222px;
+    margin-left: 176px;
     margin-top: 8px;
-    width: 17px;
+    width: 16px;
     display: none;
     z-index: 45;
 }
 #error-detect{
     position: absolute;
-    margin-left: 222px;
+    margin-left: 176px;
     margin-top: 8px;
     width: 18px;
     display: none;
@@ -214,7 +214,7 @@ body{
 }
 @keyframes animateClickOut {
     0%{
-        margin-top: -25px;
+        margin-top: -15px;
         transform: scale(0.5);
     } 50%{
         transform: scale(0.6);
@@ -225,7 +225,7 @@ body{
 }
 .span-cpf__islater{
     position: relative;
-    margin-top: -25px;
+    margin-top: -15px;
     transform: scale(0.5);
     margin-left: calc(0.4rem + 0.40rem);
     font-weight: 800;
@@ -241,7 +241,7 @@ body{
         transform: scale(0.6);
         color: rgb(189, 186, 186);
     } 100%{
-        margin-top: -25px;
+        margin-top: -15px;
         transform: scale(0.5);
     }
 }
