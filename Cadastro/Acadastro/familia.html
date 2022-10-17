@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Ficha A - Ficha de Cadastro de Família e do Cidadão para ACS</title>
@@ -29,7 +29,8 @@
             <div class="box-class" >
                 <h1 id="title-section">INDENTIFIAÇÃO DO CIDADÃO</h1>
                     <div class="box-align-input">
-                            <span for="cpf-id" class="label-cpf">cpf</span>
+                            <label for="cpf-id" class="label-cpf">cpf</label>
+
                             <input type="text" name="cpf-id" class="cpf-id" inputmode= "numeric" maxlength="14" onchange="validacao()">
                             <img id="verific" src="../../assets/verificado.ico" alt="verific">
                             <img id="error-detect" src="../../assets/error.ico" alt="error">
