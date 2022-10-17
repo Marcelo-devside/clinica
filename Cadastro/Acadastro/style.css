@@ -17,6 +17,8 @@ body{
 .img-background2{
     position: fixed;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     width: 100vw;
     height: 100vh;
     z-index: 1;
@@ -119,13 +121,18 @@ body{
     }
 }
 /* --------------------------------------------------------- */
+.alignCitizen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #idCitizen-section{
     display: flex;
     justify-content: center;
     position: relative;
-    width: 100vw;
+    width: 90%;
     height: 60vh;
-    margin-top: -48vh;
+    margin-top: -15rem;
     z-index: 2;
 }
 .align-section{
