@@ -1,6 +1,8 @@
 const showMenu = document.querySelector('#menu-popup')
 const closeMenu = document.querySelector('#menu-close')
 const labelCpf = document.querySelector('.label-cpf')
+const labelBorn = document.querySelector('.label-born')
+const bornDate = document.querySelector('.happyBirthday')
 const cpfId = document.querySelector('.cpf-id')
 const barraLateral = document. querySelector('.barra-lateral')
 const verificado = document.querySelector('#verific')
@@ -36,14 +38,41 @@ cpfId.addEventListener("focusout", (e)=>{
         labelCpf.classList.replace('label-cpf','span-cpf__islater')
     }
 })
+bornDate.addEventListener("click", ()=>{
+    labelBorn.classList.replace('label-born','label-born__islater')
+    console.log("clicou")
+})
+labelBorn.addEventListener("click", ()=>{
+    labelBorn.classList.replace('label-born','label-born__islater')
+})
+bornDate.addEventListener("focusout", (e)=>{
+    valor = e.target.value;
+    if (valor === "") {
+    labelBorn.classList.replace('label-born__islater','label-born')
+    verificado.style.display = 'none';
+    errorDetect.style.display = 'none';
+    bornDate.classList.remove('error-cpf')
+    } else {
+        labelBorn.classList.replace('label-born','label-born__islater')
+    }
+})
+bornDate.addEventListener("input", (e) => {
+    let value = e.currentTarget.value;
+    value = value
+    .replace(/(\d{2})+(\d{2})+(\d{4})/g, "$1/$2/$3")
+    e.currentTarget.value = value;
+    if (value.length == 10) {
+                let cpf = bornDate.value.replace(/[/]/g, "");
+                const resultadoValidacao = validaCPF(cpf);
+    }
+})
 cpfId.addEventListener("input", (e) => {
     let value = e.currentTarget.value;
     value = value
-    .replace(/(\d{3})(\d)/, "$1.$2")
-    // .replace(/^(\d{3})+(\d{3})+(\d{3})+(\d{2})/, "$1.$2.$3-$4")
+    .replace(/(\d{3})+(\d{3})+(\d{3})+(\d{2})/g, "$1.$2.$3-$4")
     e.currentTarget.value = value;
     if (value.length == 14) {
-                let cpf = cpfId.value.replace(/[.]/g, "");
+                let cpf = cpfId.value.replace(/[. -]/g, "");
                 const resultadoValidacao = validaCPF(cpf);
                 
                 if (resultadoValidacao == true) {
