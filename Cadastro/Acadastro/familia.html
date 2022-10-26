@@ -9,7 +9,7 @@
     <title>Ficha A - Ficha de Cadastro de Família e do Cidadão para ACS</title>
 </head>
 <body>
-    <img class="img-background2" src="../../assets/fundo-main.png" alt="imagem de fundo">
+    <img class="img-background2" src="../../assets/fundo-main2.png" alt="imagem de fundo">
     <div id="box">
         <h1 id="title">FICHA A - CADASTRO DE FAMÍLIA E DO CIDADÃO</h1>
     </div>
@@ -31,15 +31,27 @@
                     <h1 id="title-section">INDENTIFIAÇÃO DO CIDADÃO</h1>
                             <div class="box-align-input">
                                 <div class="align-input">
-                                    <label for="cpf-id" class="label-cpf">dnv/cpf</label>
-                                    <input type="text" name="cpf-id" class="cpf-id" inputmode= "numeric" maxlength="14" onchange="validacao()">
+                                    <label for="cpf-id" class="label-cpf genericLabel">DNV / CPF</label>
+                                    <input type="text" name="cpf-id" class="cpf-id genericInput" inputmode= "numeric" maxlength="14" onchange="validacao()">
                                     <img id="verific" src="../../assets/verificado.ico" alt="verific">
                                     <img id="error-detect" src="../../assets/error.ico" alt="error">
                                 </div>
-                                <div class="align-date">
-                                    <label for="bornDate" class="label-born">DATA NASC</label>
-                                    <input type="text" name="bornDate" inputmode="numeric" class="happyBirthday" maxlength="10">
+                                <div class="align-input">
+                                    <label for="bornDate" class="label-born genericLabel">DATA NASC</label>
+                                    <input type="text" name="bornDate" inputmode="numeric" class="happyBirthday genericInput" maxlength="10">
                                 </div>
+                            </div>
+                            <div class="align-input">
+                                <label for="patient_name" class="genericLabel">NOME DO CIDADÃO</label>
+                                <input type="text" name="patient_name" inputmode="text" class="patient_name genericInput" maxlength="30">
+                            </div>
+                            <div class="align-input">
+                                <label for="mother" class="genericLabel">NOME DA PAI</label>
+                                <input type="text" name="mother" inputmode="text" class="mother genericInput" maxlength="30">
+                            </div>
+                            <div class="align-input">
+                                <label for="father" class="genericLabel">NOME DO MÃE</label>
+                                <input type="text" name="father" inputmode="text" class="father genericInput" maxlength="30">
                             </div>
                 </div>
             </div>

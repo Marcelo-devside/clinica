@@ -33,29 +33,27 @@ cpfId.addEventListener("focusout", (e)=>{
     labelCpf.classList.replace('span-cpf__islater','label-cpf')
     verificado.style.display = 'none';
     errorDetect.style.display = 'none';
-    cpfId.classList.remove('error-cpf')
     } else {
         labelCpf.classList.replace('label-cpf','span-cpf__islater')
     }
 })
-bornDate.addEventListener("click", ()=>{
-    labelBorn.classList.replace('label-born','label-born__islater')
-    console.log("clicou")
-})
-labelBorn.addEventListener("click", ()=>{
-    labelBorn.classList.replace('label-born','label-born__islater')
-})
-bornDate.addEventListener("focusout", (e)=>{
-    valor = e.target.value;
-    if (valor === "") {
-    labelBorn.classList.replace('label-born__islater','label-born')
-    verificado.style.display = 'none';
-    errorDetect.style.display = 'none';
-    bornDate.classList.remove('error-cpf')
-    } else {
-        labelBorn.classList.replace('label-born','label-born__islater')
-    }
-})
+// bornDate.addEventListener("click", ()=>{
+//     labelBorn.classList.replace('label-born','label-born__islater')
+//     console.log("clicou")
+// })
+// labelBorn.addEventListener("click", ()=>{
+//     labelBorn.classList.replace('label-born','label-born__islater')
+// })
+// bornDate.addEventListener("focusout", (e)=>{
+//     valor = e.target.value;
+//     if (valor === "") {
+//     labelBorn.classList.replace('label-born__islater','label-born')
+//     verificado.style.display = 'none';
+//     errorDetect.style.display = 'none';
+//     } else {
+//         labelBorn.classList.replace('label-born','label-born__islater')
+//     }
+// })
 bornDate.addEventListener("input", (e) => {
     let value = e.currentTarget.value;
     value = value
@@ -76,17 +74,19 @@ cpfId.addEventListener("input", (e) => {
                 const resultadoValidacao = validaCPF(cpf);
                 
                 if (resultadoValidacao == true) {
-                    verificado.style.display = 'block';
-                    errorDetect.style.display = 'none';
+                    setTimeout(() => {
+                        verificado.style.display = 'block';
+                        errorDetect.style.display = 'none';
+                    }, 600);
                 } else {
-                    errorDetect.style.display = 'block';
-                    verificado.style.display = 'none';
-                    cpfId.classList.add('error-cpf')
+                    setTimeout(() => {
+                        errorDetect.style.display = 'block';
+                        verificado.style.display = 'none';
+                    }, 600);
                 }
     } else {
         verificado.style.display = 'none';
         errorDetect.style.display = 'none';
-        cpfId.classList.remove('error-cpf')
     } 
 })
 cpfId.addEventListener("keypress", (e) => {
