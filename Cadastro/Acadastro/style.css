@@ -192,14 +192,14 @@ body{
     font-family: 'Inter', sans-serif;
     font-size: 0.9em;
     transform: scale(0.7);
-    margin-top: 1px;
+    margin-top: 6px;
     margin-left: -23px;
     letter-spacing: 0.05rem;
     font-weight: 600;
     text-transform: uppercase;
     color: rgb(189, 186, 186);
     width: 155px;
-    animation: animateClickOut 70ms linear;
+    animation: animateClickOut 10ms linear;
 }
 .genericInput{
     font-family: 'Inter', sans-serif;
@@ -212,17 +212,66 @@ body{
     border-left: 0;
     outline: 0;
     color: #ffffff;
-    height: 30%;
+    height: 40%;
     margin-bottom: 50px;
 }
 .cpf-id{
     width: 175px;
+    animation: animateClickOut 10ms linear;
+}
+.residencial_input{
+    width: 150px;
+    animation: animateClickOut 10ms linear;
+}
+.celular_input{
+    width: 100%;
+    animation: animateClickOut 10ms linear;
 }
 .happyBirthday{
-    width: 110px;
+    width: 100%;
+    animation: animateClickOut 10ms linear;
 }
+@keyframes animateClickOut {
+    0%{
+        margin-left: -27px;
+        margin-top: -10px;
+        transform: scale(0.625);
+    } 50%{
+        margin-top: -6px;
+        transform: scale(0.65);
+    } 100%{
+        margin-top: -3px;
+        transform: scale(0.7);
+    }
+}
+
 .patient_name, .mother, .father{
     width: 100%;
+    text-transform: capitalize;
+    animation: animateClickOut 10ms linear;
+}
+.genericLabelIsLater{
+    margin-top: -15px;
+    transform: scale(0.5);
+    /* margin-left: calc(0.05rem + 0.2rem); */
+    font-weight: 800;
+    width: 98px;
+    color: #ffffff;
+    animation: animateClick 10ms linear;
+}
+@keyframes animateClick {
+    0%{
+        margin-top: -3px;
+        transform: scale(0.57);
+        color: rgb(189, 186, 186);
+    } 50%{
+        margin-top: -6px;
+        transform: scale(0.55);
+        color: rgb(189, 186, 186);
+    } 100%{
+        margin-top: -10px;
+        transform: scale(0.525);
+    }
 }
 
 

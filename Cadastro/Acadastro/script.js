@@ -3,6 +3,16 @@ const closeMenu = document.querySelector('#menu-close')
 const labelCpf = document.querySelector('.label-cpf')
 const labelBorn = document.querySelector('.label-born')
 const bornDate = document.querySelector('.happyBirthday')
+const labelResildencial = document.querySelector('.label_residencial')
+const labelCelular = document.querySelector('.label_celular')
+const labelPatient = document.querySelector('.label_patient')
+const labelMother = document.querySelector('.label_mather')
+const labelFather = document.querySelector('.label_father')
+const resildencialInput = document.querySelector('.residencial_input')
+const celularInput = document.querySelector('.celular_input')
+const patientInput = document.querySelector('.patient_name')
+const motherInput = document.querySelector('.mother')
+const fatherInput = document.querySelector('.father')
 const cpfId = document.querySelector('.cpf-id')
 const barraLateral = document. querySelector('.barra-lateral')
 const verificado = document.querySelector('#verific')
@@ -22,19 +32,105 @@ closeMenu.addEventListener('click', ()=>{
     }, 200);
 })
 cpfId.addEventListener("click", ()=>{
-    labelCpf.classList.replace('label-cpf','span-cpf__islater')
+    labelCpf.classList.replace('label-cpf','genericLabelIsLater')
+    labelCpf.innerHTML=`<label>DNV</label>`
 })
-labelCpf.addEventListener("click", ()=>{
-    labelCpf.classList.replace('label-cpf','span-cpf__islater')
+bornDate.addEventListener("click", ()=>{
+    labelBorn.classList.replace('label-born','genericLabelIsLater')
+})
+resildencialInput.addEventListener("click", ()=>{
+    labelResildencial.classList.replace('label_residencial','genericLabelIsLater')
+})
+celularInput.addEventListener("click", ()=>{
+    labelCelular.classList.replace('label_celular','genericLabelIsLater')
+})
+patientInput.addEventListener("click", ()=>{
+    labelPatient.classList.replace('label_patient','genericLabelIsLater')
+})
+motherInput.addEventListener("click", ()=>{
+    labelMother.classList.replace('label_mather','genericLabelIsLater')
+})
+fatherInput.addEventListener("click", ()=>{
+    labelFather.classList.replace('label_father','genericLabelIsLater')
 })
 cpfId.addEventListener("focusout", (e)=>{
     valor = e.target.value;
     if (valor === "") {
-    labelCpf.classList.replace('span-cpf__islater','label-cpf')
+    labelCpf.classList.replace('genericLabelIsLater','label-cpf')
+    labelCpf.innerHTML=`<label>DNV / CPF</label>`
     verificado.style.display = 'none';
     errorDetect.style.display = 'none';
     } else {
-        labelCpf.classList.replace('label-cpf','span-cpf__islater')
+        labelCpf.classList.replace('label-cpf','genericLabelIsLater')
+    }
+})
+bornDate.addEventListener("focusout", (e)=>{
+    valor = e.target.value;
+    if (valor === "") {
+        labelBorn.classList.replace('genericLabelIsLater','label-born')
+    } else {
+        labelBorn.classList.replace('label-born','genericLabelIsLater')
+    }
+})
+function Idade(){
+    let today = new Date();
+    const data_atual = new Intl.DateTimeFormat(['bra', 'id']).format(today);
+    // const transfomrDate = data_atual.toString();
+    let data_atualFormat = data_atual.replace(/[/]/g, "");
+    let ano_atual = data_atualFormat.substring(4, 8)
+    console.log("ano atual", ano_atual)
+    let mes_atual = data_atualFormat.substring(2, 4)
+    console.log("mês atual", mes_atual)
+    let dia_atual = data_atualFormat.substring(0, 2)
+    console.log("dia atual", dia_atual)
+    let nascimento = bornDate.value
+    let nascimentoFormat = nascimento.replace(/[/]/g, "");
+    let ano_nascimento = nascimentoFormat.substring(4, 8)
+    console.log("ano do nascimento", ano_nascimento)
+    let mes_nascimento = nascimentoFormat.substring(2, 4)
+    console.log("mês do nascimento", mes_nascimento)
+    let dia_nascimento = nascimentoFormat.substring(0, 2)
+    console.log("dia do nascimento", dia_nascimento)
+}
+console.log(Idade())
+resildencialInput.addEventListener("focusout", (e)=>{
+    valor = e.target.value;
+    if (valor === "") {
+        labelResildencial.classList.replace('genericLabelIsLater','label_residencial')
+    } else {
+        labelBorn.classList.replace('label_residencial','genericLabelIsLater')
+    }
+})
+celularInput.addEventListener("focusout", (e)=>{
+    valor = e.target.value;
+    if (valor === "") {
+        labelCelular.classList.replace('genericLabelIsLater','label_celular')
+    } else {
+        labelBorn.classList.replace('label_celular','genericLabelIsLater')
+    }
+})
+patientInput.addEventListener("focusout", (e)=>{
+    valor = e.target.value;
+    if (valor === "") {
+        labelPatient.classList.replace('genericLabelIsLater','label_patient')
+    } else {
+        labelBorn.classList.replace('label_patient','genericLabelIsLater')
+    }
+})
+motherInput.addEventListener("focusout", (e)=>{
+    valor = e.target.value;
+    if (valor === "") {
+        labelMother.classList.replace('genericLabelIsLater','label_mather')
+    } else {
+        labelBorn.classList.replace('label_mather','genericLabelIsLater')
+    }
+})
+fatherInput.addEventListener("focusout", (e)=>{
+    valor = e.target.value;
+    if (valor === "") {
+        labelFather.classList.replace('genericLabelIsLater','label_father')
+    } else {
+        labelBorn.classList.replace('label_father','genericLabelIsLater')
     }
 })
 // bornDate.addEventListener("click", ()=>{
@@ -54,15 +150,29 @@ cpfId.addEventListener("focusout", (e)=>{
 //         labelBorn.classList.replace('label-born','label-born__islater')
 //     }
 // })
+resildencialInput.addEventListener("input", (e) => {
+    e.currentTarget.maxLength = 14
+    let value = e.currentTarget.value
+    value = value.replace(/\D/g, "")
+    value = value.replace(/^(\d{2})(\d{4})/, "($1) $2-")
+    e.currentTarget.value = value
+    return e
+})
+celularInput.addEventListener("input", (e) => {
+    e.currentTarget.maxLength = 15
+    let value = e.currentTarget.value
+    value = value.replace(/\D/g, "")
+    value = value.replace(/^(\d{2})(\d{5})/, "($1) $2-")
+    e.currentTarget.value = value
+    return e
+})
 bornDate.addEventListener("input", (e) => {
-    let value = e.currentTarget.value;
-    value = value
+    e.currentTarget.maxLength = 10
+    let value = e.currentTarget.value
+    value = value.replace(/\D/g, "")
     .replace(/(\d{2})+(\d{2})+(\d{4})/g, "$1/$2/$3")
-    e.currentTarget.value = value;
-    if (value.length == 10) {
-                let cpf = bornDate.value.replace(/[/]/g, "");
-                const resultadoValidacao = validaCPF(cpf);
-    }
+    e.currentTarget.value = value
+    return e
 })
 cpfId.addEventListener("input", (e) => {
     let value = e.currentTarget.value;
@@ -70,6 +180,7 @@ cpfId.addEventListener("input", (e) => {
     .replace(/(\d{3})+(\d{3})+(\d{3})+(\d{2})/g, "$1.$2.$3-$4")
     e.currentTarget.value = value;
     if (value.length == 14) {
+                labelCpf.innerHTML=`<label>CPF</label>`
                 let cpf = cpfId.value.replace(/[. -]/g, "");
                 const resultadoValidacao = validaCPF(cpf);
                 
@@ -85,6 +196,7 @@ cpfId.addEventListener("input", (e) => {
                     }, 600);
                 }
     } else {
+        labelCpf.innerHTML=`<label>DNV</label>`
         verificado.style.display = 'none';
         errorDetect.style.display = 'none';
     } 
