@@ -273,6 +273,26 @@ body{
         transform: scale(0.525);
     }
 }
+@media screen and (max-width:375px) {
+    .box-class{
+        width: 96%;
+    }
+.genericInput{
+    letter-spacing: 0.1rem;
+}
+.residencial_input {
+    width: 140px;
+}
+.cpf-id {
+    width: 140px;
+}
+#verific{
+    margin-left: 128px;
+}
+#error-detect {
+    margin-left: 128px;
+}
+}
 
 
 /* ------------------------------------------------------------------ */

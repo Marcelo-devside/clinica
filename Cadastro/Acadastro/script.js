@@ -166,6 +166,13 @@ celularInput.addEventListener("input", (e) => {
     e.currentTarget.value = value
     return e
 })
+patientInput.addEventListener("input", (e) => {
+    e.currentTarget.maxLength = 50
+    let value = e.currentTarget.value
+    value = value.replace(/\d/g, "")
+    e.currentTarget.value = value
+    return e
+})
 bornDate.addEventListener("input", (e) => {
     e.currentTarget.maxLength = 10
     let value = e.currentTarget.value
@@ -211,7 +218,7 @@ cpfId.addEventListener("keypress", (e) => {
         e.preventDefault();
     }
 });
-let entr = document.querySelector(".form-control").value
+let entr = document.querySelector(".form-control").value 
 entr.addEventListener('keypress', function(e){
     if (!checkInput(e)){
         e.preventDefault();
