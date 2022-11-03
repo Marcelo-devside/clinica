@@ -255,7 +255,7 @@ body{
     transform: scale(0.5);
     /* margin-left: calc(0.05rem + 0.2rem); */
     font-weight: 800;
-    width: 98px;
+    width: 104px;
     color: #ffffff;
     animation: animateClick 10ms linear;
 }
