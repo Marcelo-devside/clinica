@@ -17,6 +17,7 @@ const cpfId = document.querySelector('.cpf-id')
 const barraLateral = document. querySelector('.barra-lateral')
 const verificado = document.querySelector('#verific')
 const errorDetect = document.querySelector('#error-detect')
+const legendAge = document.querySelector('.legend_age')
 showMenu.addEventListener('click', ()=>{
     setTimeout(() => {
         showMenu.style.display = "none"
@@ -195,7 +196,7 @@ function Idade(){
                 qtdDias = diasDoMes(mes_atual , ano_atual) + dia_atual - dia_nascimento
             }
             // debugger
-            console.log(`${qtdAno} anos, ${qtdMes} meses e ${qtdDias} dias`)
+            legendAge.innerHTML = `${qtdAno} anos, ${qtdMes} meses e ${qtdDias} dias`
         }
         if(validaData(dia_nascimento, mes_nascimento, ano_nascimento) == 1 ){
         calculandoIdade(dia_nascimento, mes_nascimento, ano_nascimento, dia_atual, mes_atual, ano_atual)

@@ -227,6 +227,14 @@ body{
     width: 100%;
     animation: animateClickOut 10ms linear;
 }
+.legend_age{
+    position: absolute;
+    margin-top: -45px;
+    font-size: 2.2vw;
+    letter-spacing: 0.5px;
+    color: yellow;
+    font-family: 'Space Grotesk', sans-serif;
+}
 .happyBirthday{
     width: 100%;
     animation: animateClickOut 10ms linear;
@@ -273,7 +281,7 @@ body{
         transform: scale(0.525);
     }
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:400px) {
     .box-class{
         width: 96%;
     }
@@ -292,6 +300,14 @@ body{
 #error-detect {
     margin-left: 128px;
 }
+.legend_age{
+    font-size: 2.7vw;
+}
+}
+@media screen and (max-width:365px) {
+    .legend_age{
+        font-size: 2.3vw;
+    }
 }
 
 
