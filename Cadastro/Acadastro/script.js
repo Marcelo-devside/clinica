@@ -94,6 +94,9 @@ cpfId.addEventListener("focusout", (e)=>{
         labelCpf.classList.replace('label-cpf','genericLabelIsLater')
     }
 })
+bornDate.addEventListener("focus", (e)=>{
+    legendAge.innerHTML = ``
+})
 bornDate.addEventListener("focusout", (e)=>{
     valor = e.target.value;
     if (valor === "") {
@@ -146,6 +149,8 @@ function Idade(){
             return 0
         } else if(dia == 31 && (mes == 04 || mes == 06 || mes == 09 || mes == 11)){
             return 0
+        } else if( ano.length != 4){
+            return 0
         } else {
             return 1
         }
@@ -186,23 +191,26 @@ function Idade(){
                     mes_nascimento = 0
                 }
             }
-            if(dia_nascimento == dia_atual){
+            if(dia_nascimento > dia_atual){ 
+                qtdDias = diasDoMes(mes_atual , ano_atual) 
+            } if(dia_nascimento == dia_atual){
                 qtdMes++
                 qtdDias = 0
             } else if(dia_nascimento < dia_atual){
-                qtdMes++
+                // qtdMes++
                 qtdDias = dia_nascimento - dia_atual
             } else {
                 qtdDias = diasDoMes(mes_atual , ano_atual) + dia_atual - dia_nascimento
             }
-            // debugger
             legendAge.innerHTML = `${qtdAno} anos, ${qtdMes} meses e ${qtdDias} dias`
+            // debugger
         }
         if(validaData(dia_nascimento, mes_nascimento, ano_nascimento) == 1 ){
         calculandoIdade(dia_nascimento, mes_nascimento, ano_nascimento, dia_atual, mes_atual, ano_atual)
         } else {
-            console.log("DATA INVALIDA!")
+            legendAge.innerHTML = `Data invalida!`
         }
+    
     }
 
 //     if (mes_nascimento > mes_atual){
@@ -301,7 +309,7 @@ bornDate.addEventListener("input", (e) => {
 })
 cpfId.addEventListener("input", (e) => {
     let value = e.currentTarget.value;
-    value = value
+    value = value.replace(/\D/g, "")
     .replace(/(\d{3})+(\d{3})+(\d{3})+(\d{2})/g, "$1.$2.$3-$4")
     e.currentTarget.value = value;
     if (value.length == 14) {

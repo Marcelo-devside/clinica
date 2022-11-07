@@ -230,7 +230,7 @@ body{
 .legend_age{
     position: absolute;
     margin-top: -45px;
-    font-size: 2.2vw;
+    font-size: 3vw;
     letter-spacing: 0.5px;
     color: yellow;
     font-family: 'Space Grotesk', sans-serif;
@@ -295,18 +295,21 @@ body{
     width: 140px;
 }
 #verific{
-    margin-left: 128px;
+    margin-left: 133px;
 }
 #error-detect {
-    margin-left: 128px;
+    margin-left: 133px;
 }
 .legend_age{
-    font-size: 2.7vw;
+    font-size: 3.1vw;
+}
+.box-align-input{
+    gap: 18px;
 }
 }
 @media screen and (max-width:365px) {
     .legend_age{
-        font-size: 2.3vw;
+        font-size: 3vw;
     }
 }
 
