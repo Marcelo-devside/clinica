@@ -219,6 +219,15 @@ body{
     width: 175px;
     animation: animateClickOut 10ms linear;
 }
+.uf_input{
+    width: 50px;
+    animation: animateClickOut 10ms linear;
+}
+.municipio_input{
+    width: 262px;
+    animation: animateClickOut 10ms linear;
+}
+
 .residencial_input{
     width: 150px;
     animation: animateClickOut 10ms linear;
@@ -257,6 +266,12 @@ body{
     width: 100%;
     text-transform: capitalize;
     animation: animateClickOut 10ms linear;
+}
+.uf_input{
+    text-transform: uppercase;
+}
+.municipio_input{
+    text-transform: capitalize;
 }
 .genericLabelIsLater{
     margin-top: -15px;
