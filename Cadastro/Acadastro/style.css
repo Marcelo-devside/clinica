@@ -86,6 +86,8 @@ body{
 .h3-links{
     margin-left: 30px;
     padding-top: 5vh;
+    max-width: 63vw;
+    min-width: 300px;
 }
 .a-links{
     font-family: 'Space Grotesk', sans-serif;
@@ -94,6 +96,10 @@ body{
     font-size: 11px;
     text-decoration: none;
     color: #fff;
+    /* padding-left: 15px;
+    padding-right: 5vw;
+    padding-top: 23px;
+    padding-bottom: 23px; */
 }
 .menu-show{
     animation: movingMenu 0.3s;
