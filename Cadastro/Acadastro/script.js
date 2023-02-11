@@ -141,25 +141,27 @@ function Idade(){
     dataNasc = `${ano_nascimento}.${mes_nascimento}.${dia_nascimento}`
     const today = new Date()
     const  birthdate = new Date(dataNasc)
-    console.log('birthdate', birthdate);
-    const ageinMiliseconds = parseFloat(today - birthdate)
+    const ageinMiliseconds = today - birthdate
     const ageinSeconds = ageinMiliseconds / 1000
     const ageinMinutes = ageinSeconds / 60
     const ageinHours = ageinMinutes / 60
     const ageinDays = ageinHours / 24
-
-    const ageinYears = Math.floor(ageinDays / 365.25)
-    const ageinMonths = Math.floor((ageinDays % 365.25) / 30.44)
-    const ageinDaysRemainder = Math.floor(ageinDays % 365.25 % 30.44)
-
-    if(ageinYears=== 0 && ageinMonths === 0 && ageinDaysRemainder === 0){
+    
+    const numberageinYears = Math.floor(ageinDays / 365.25)
+    const numberageinMonths = Math.floor((ageinDays % 365.25) / 30.44)
+    const numberageinDaysRemainder = Math.floor(ageinDays % 365.25 % 30.44)
+    const ageinYears = String(numberageinYears)
+    const ageinMonths = String(numberageinMonths)
+    const ageinDaysRemainder = String(numberageinDaysRemainder)
+    console.log("ageinMonths", typeof(ageinMonths));
+    if(ageinYears=== "0" && ageinMonths === "0" && ageinDaysRemainder === "0"){
     legendAge.innerHTML = 'A criança Nasceu hoje!'
 // legendAge.innerHTML = `${ageinYears} anos, ${ageinMonths} meses e ${ageinDaysRemainder} dias.`
-    } else if (ageinYears=== 0 && ageinDaysRemainder === 0){
+    } else if (ageinYears=== "0" && ageinDaysRemainder === "0"){
             legendAge.innerHTML = `${ageinMonths} meses`
-        }else if (ageinYears=== 0 && ageinMonths === 0){
+        }else if (ageinYears=== "0" && ageinMonths === "0"){
             legendAge.innerHTML = `${ageinDaysRemainder} dias.`
-        } else if (ageinMonths === 0 && ageinDaysRemainder === 0){
+        } else if (ageinMonths === "0" && ageinDaysRemainder === "0"){
             legendAge.innerHTML = `${ageinYears} anos`
         } else { 
             legendAge.innerHTML = `${ageinYears} anos`
