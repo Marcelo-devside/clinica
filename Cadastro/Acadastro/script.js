@@ -148,9 +148,9 @@ function Idade(){
     const ageinHours = ageinMinutes / 60
     const ageinDays = ageinHours / 24
 
-    const ageinYears = Math.floor(ageinDays / 365.25)
-    const ageinMonths = Math.floor((ageinDays % 365.25) / 30.44)
-    const ageinDaysRemainder = Math.floor(ageinDays % 365.25 % 30.44)
+    const ageinYears = parseInt(Math.floor(ageinDays / 365.25))
+    const ageinMonths =parseInt(Math.floor((ageinDays % 365.25) / 30.44))
+    const ageinDaysRemainder = parseInt(Math.floor(ageinDays % 365.25 % 30.44))
 
     if(ageinYears=== 0 && ageinMonths === 0 && ageinDaysRemainder === 0){
     legendAge.innerHTML = 'A criança Nasceu hoje!'
