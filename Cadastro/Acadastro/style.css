@@ -145,8 +145,8 @@ body{
     display: flex;
     justify-content: center;
     width: 95vw;
-    height: 150vh;
-    margin-top: 27em;
+    height: 60vh;
+    margin-top: 25em;
     background-color: #FFFFFF0F;
     border: solid 1px #FFFFFF17;
     backdrop-filter: blur(0.5rem);

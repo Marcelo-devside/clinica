@@ -141,7 +141,7 @@ function Idade(){
     dataNasc = `${ano_nascimento}.${mes_nascimento}.${dia_nascimento}`
     const today = new Date()
     const  birthdate = new Date(dataNasc)
-    
+    console.log('birthdate', birthdate);
     const ageinMiliseconds = today - birthdate
     const ageinSeconds = ageinMiliseconds / 1000
     const ageinMinutes = ageinSeconds / 60
@@ -152,12 +152,20 @@ function Idade(){
     const ageinMonths = Math.floor((ageinDays % 365.25) / 30.44)
     const ageinDaysRemainder = Math.floor(ageinDays % 365.25 % 30.44)
 
-    legendAge.innerHTML = `${ageinYears} anos, ${ageinMonths} meses e ${ageinDaysRemainder} dias.`
+    if(ageinYears=== 0 && ageinMonths === 0 && ageinDaysRemainder === 0){
+    legendAge.innerHTML = 'A criança Nasceu hoje!'
+// legendAge.innerHTML = `${ageinYears} anos, ${ageinMonths} meses e ${ageinDaysRemainder} dias.`
+    } else if (ageinYears=== 0 && ageinDaysRemainder === 0){
+            legendAge.innerHTML = `${ageinMonths} meses`
+        }else if (ageinYears=== 0 && ageinMonths === 0){
+            legendAge.innerHTML = `${ageinDaysRemainder} dias.`
+        } else if (ageinMonths === 0 && ageinDaysRemainder === 0){
+            legendAge.innerHTML = `${ageinYears} anos`
+        } else { 
+            legendAge.innerHTML = `${ageinYears} anos`
+        ageinYears < 1 ? legendAge.innerHTML = `${ageinMonths} meses e ${ageinDaysRemainder} dias.` : legendAge.innerHTML = `${ageinYears} anos, ${ageinMonths} meses`
+        }
 }
-bornDate.addEventListener('focusout',()=>{
-    Idade()
-
-})
     // let today = new Date();
     // let hours = today.setHours(0)
     // let minutes = today.setMinutes(0)
