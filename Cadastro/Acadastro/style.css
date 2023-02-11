@@ -57,7 +57,7 @@ body{
     height: 47vh;
     background-color: #362d4063;
     border: solid 1px #868383a1;
-    backdrop-filter: blur(1.35rem);
+    backdrop-filter: blur(blur(11.350000000000001rem));
     margin-left: -350px;
     margin-top: clamp(2vw + 2em, 4.3vw + 3em, 19vw + 19em);
     border-top-style: none;
@@ -145,7 +145,7 @@ body{
     display: flex;
     justify-content: center;
     width: 95vw;
-    height: 60vh;
+    height: 75vh;
     margin-top: 25em;
     background-color: #FFFFFF0F;
     border: solid 1px #FFFFFF17;

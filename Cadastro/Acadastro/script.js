@@ -142,15 +142,15 @@ function Idade(){
     const today = new Date()
     const  birthdate = new Date(dataNasc)
     console.log('birthdate', birthdate);
-    const ageinMiliseconds = today - birthdate
+    const ageinMiliseconds = parseFloat(today - birthdate)
     const ageinSeconds = ageinMiliseconds / 1000
     const ageinMinutes = ageinSeconds / 60
     const ageinHours = ageinMinutes / 60
     const ageinDays = ageinHours / 24
 
-    const ageinYears = parseInt(Math.floor(ageinDays / 365.25))
-    const ageinMonths =parseInt(Math.floor((ageinDays % 365.25) / 30.44))
-    const ageinDaysRemainder = parseInt(Math.floor(ageinDays % 365.25 % 30.44))
+    const ageinYears = Math.floor(ageinDays / 365.25)
+    const ageinMonths = Math.floor((ageinDays % 365.25) / 30.44)
+    const ageinDaysRemainder = Math.floor(ageinDays % 365.25 % 30.44)
 
     if(ageinYears=== 0 && ageinMonths === 0 && ageinDaysRemainder === 0){
     legendAge.innerHTML = 'A criança Nasceu hoje!'
