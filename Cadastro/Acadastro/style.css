@@ -172,6 +172,7 @@ body{
 }
 .box-align-input{
     display: flex;
+    justify-content: space-between;
     gap: 24px;
 }
 /* .error-cpf {
@@ -232,7 +233,7 @@ body{
     animation: animateClickOut 10ms linear;
 }
 .municipio_input{
-    width: 262px;
+    width: 100%;
     animation: animateClickOut 10ms linear;
 }
 
@@ -247,10 +248,10 @@ body{
 .legend_age{
     position: absolute;
     margin-top: -45px;
-    font-size: 3vw;
-    letter-spacing: 0.5px;
+    font-size: 2.5vw;
+    letter-spacing: 1.2px;
     color: yellow;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .happyBirthday{
     width: 100%;
@@ -326,9 +327,9 @@ body{
 .legend_age{
     font-size: 3.1vw;
 }
-.box-align-input{
+/* .box-align-input{
     gap: 18px;
-}
+} */
 }
 @media screen and (max-width:365px) {
     .legend_age{
