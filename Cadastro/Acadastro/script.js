@@ -41,6 +41,26 @@ closeMenu.addEventListener('click', ()=>{
 })
 //---------------------------------------------------------------------
 //
+cpfId.addEventListener("keyup",()=>{
+    if(cpfId.value.length == 14){
+        labelBorn.classList.replace('label-born','genericLabelIsLater')
+        bornDate.focus()
+    }
+})
+resildencialInput.addEventListener("keyup",()=>{
+    if(resildencialInput.value.length == 14){
+        labelCelular.classList.replace('label_celular','genericLabelIsLater')
+    celularInput.focus()
+    }
+    console.log("residencial tamanho:",resildencialInput.value.length);
+})
+celularInput.addEventListener("keyup",()=>{
+    if(celularInput.value.length == 15){
+        labelPatient.classList.replace('label_patient','genericLabelIsLater')
+    patientInput.focus()
+    }
+})
+
 cpfId.addEventListener("click", ()=>{
     labelCpf.classList.replace('label-cpf','genericLabelIsLater')
     labelCpf.innerHTML=`<label>DNV</label>`
