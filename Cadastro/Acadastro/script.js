@@ -155,17 +155,17 @@ function Idade(){
     const ageinDaysRemainder = String(numberageinDaysRemainder)
     console.log("ageinMonths", typeof(ageinMonths));
     if(ageinYears=== "0" && ageinMonths === "0" && ageinDaysRemainder === "0"){
-    legendAge.innerHTML = 'A criança Nasceu hoje!'
+    legendAge.textContent = 'A criança Nasceu hoje!'
 // legendAge.innerHTML = `${ageinYears} anos, ${ageinMonths} meses e ${ageinDaysRemainder} dias.`
     } else if (ageinYears=== "0" && ageinDaysRemainder === "0"){
-            legendAge.innerHTML = `${ageinMonths} meses`
+            legendAge.textContent = `${ageinMonths} meses`
         }else if (ageinYears=== "0" && ageinMonths === "0"){
-            legendAge.innerHTML = `${ageinDaysRemainder} dias.`
+            legendAge.textContent = `${ageinDaysRemainder} dias.`
         } else if (ageinMonths === "0" && ageinDaysRemainder === "0"){
-            legendAge.innerHTML = `${ageinYears} anos`
+            legendAge.textContent = `${ageinYears} anos`
         } else { 
-            legendAge.innerHTML = `${ageinYears} anos`
-        ageinYears < 1 ? legendAge.innerHTML = `${ageinMonths} meses e ${ageinDaysRemainder} dias.` : legendAge.innerHTML = `${ageinYears} anos, ${ageinMonths} meses`
+            legendAge.textContent = `${ageinYears} anos`
+        ageinYears < 1 ? legendAge.textContent = `${ageinMonths} meses e ${ageinDaysRemainder} dias.` : legendAge.textContent = `${ageinYears} anos, ${ageinMonths} meses`
         }
 }
     // let today = new Date();
