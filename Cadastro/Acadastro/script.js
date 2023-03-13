@@ -158,10 +158,14 @@ function Idade(){
     let mes_nascimento = nascimentoFormat.substring(2, 4)
     console.log("mês do nascimento", mes_nascimento)
     let dia_nascimento = nascimentoFormat.substring(0, 2)
-    dataNasc = `${ano_nascimento}.${mes_nascimento}.${dia_nascimento}`
+    console.log("dia do nascimento", dia_nascimento)
+    dataNasc = Date.parse(`${mes_nascimento} ${dia_nascimento} ${ano_nascimento}`)
     const today = new Date()
+    console.log("today", today)
     const  birthdate = new Date(dataNasc)
+    console.log("birthdate", birthdate)
     const ageinMiliseconds = today - birthdate
+    console.log("ageinMiliseconds", ageinMiliseconds)
     const ageinSeconds = ageinMiliseconds / 1000
     const ageinMinutes = ageinSeconds / 60
     const ageinHours = ageinMinutes / 60
@@ -170,18 +174,21 @@ function Idade(){
     const numberageinYears = Math.floor(ageinDays / 365.25)
     const numberageinMonths = Math.floor((ageinDays % 365.25) / 30.44)
     const numberageinDaysRemainder = Math.floor(ageinDays % 365.25 % 30.44)
-    const ageinYears = numberageinYears.toString()
-    const ageinMonths = numberageinMonths.toString()
-    const ageinDaysRemainder = numberageinDaysRemainder.toString()
+    const ageinYears = Number(numberageinYears)
+    console.log("diageinYears", ageinYears)
+    const ageinMonths = numberageinMonths
+    console.log("ageinMonths", ageinMonths)
+    const ageinDaysRemainder = numberageinDaysRemainder
+    console.log("ageinDaysRemainder", ageinDaysRemainder)
     console.log("ageinMonths", typeof(ageinMonths));
-    if(ageinYears=== "0" && ageinMonths === "0" && ageinDaysRemainder === "0"){
+    if(ageinYears=== 0 && ageinMonths === 0 && ageinDaysRemainder === 0){
     legendAge.textContent = 'A criança Nasceu hoje!'
 // legendAge.innerHTML = `${ageinYears} anos, ${ageinMonths} meses e ${ageinDaysRemainder} dias.`
-    } else if (ageinYears=== "0" && ageinDaysRemainder === "0"){
+    } else if (ageinYears=== 0 && ageinDaysRemainder === 0){
             legendAge.textContent = `idade: ${ageinMonths} meses`
-        }else if (ageinYears=== "0" && ageinMonths === "0"){
+        }else if (ageinYears=== 0 && ageinMonths === 0){
             legendAge.textContent = `idade: ${ageinDaysRemainder} dias.`
-        } else if (ageinMonths === "0" && ageinDaysRemainder === "0"){
+        } else if (ageinMonths === 0 && ageinDaysRemainder === 0){
             legendAge.textContent = `idade: ${ageinYears} anos`
         } else { 
             legendAge.textContent = `${ageinYears} anos`
