@@ -164,7 +164,7 @@ function Idade(){
     console.log("today", today)
     const  birthdate = new Date(dataNasc)
     console.log("birthdate", birthdate)
-    const ageinMiliseconds = today - birthdate
+    const ageinMiliseconds = today - birthdate 
     console.log("ageinMiliseconds", ageinMiliseconds)
     const ageinSeconds = ageinMiliseconds / 1000
     const ageinMinutes = ageinSeconds / 60
@@ -174,8 +174,8 @@ function Idade(){
     const numberageinYears = Math.floor(ageinDays / 365.25)
     const numberageinMonths = Math.floor((ageinDays % 365.25) / 30.44)
     const numberageinDaysRemainder = Math.floor(ageinDays % 365.25 % 30.44)
-    const ageinYears = Number(numberageinYears)
-    console.log("diageinYears", ageinYears)
+    const ageinYears = numberageinYears
+    console.log("ageinYears", ageinYears)
     const ageinMonths = numberageinMonths
     console.log("ageinMonths", ageinMonths)
     const ageinDaysRemainder = numberageinDaysRemainder
@@ -183,12 +183,11 @@ function Idade(){
     console.log("ageinMonths", typeof(ageinMonths));
     if(ageinYears=== 0 && ageinMonths === 0 && ageinDaysRemainder === 0){
     legendAge.textContent = 'A criança Nasceu hoje!'
-// legendAge.innerHTML = `${ageinYears} anos, ${ageinMonths} meses e ${ageinDaysRemainder} dias.`
     } else if (ageinYears=== 0 && ageinDaysRemainder === 0){
             legendAge.textContent = `idade: ${ageinMonths} meses`
         }else if (ageinYears=== 0 && ageinMonths === 0){
             legendAge.textContent = `idade: ${ageinDaysRemainder} dias.`
-        } else if (ageinMonths === 0 && ageinDaysRemainder === 0){
+        } else if (ageinMonths === 0 && ageinDaysRemainder === 0 || ageinMonths === 0){
             legendAge.textContent = `idade: ${ageinYears} anos`
         } else { 
             legendAge.textContent = `${ageinYears} anos`

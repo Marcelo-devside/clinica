@@ -41,9 +41,8 @@ body{
     min-height: 400px;
     max-height: 50vh;
     height: 60vh;
-    background-color: #362d4063;
+    background-color: rgb(42 42 42 / 92%);
     border: solid 1px #868383a1;
-    backdrop-filter: blur(1.35rem);
     margin-left: -385px;
     border-top-style: none;
     border-left-style: none;
@@ -106,3 +105,50 @@ body{
         margin-left: -385px;
     }
 }
+
+/*---------------------------------------------------------------------------------*/
+
+.alignCitizen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #idCitizen-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    height: 66vh;
+    margin-top: -17rem;
+    z-index: 2;
+  }
+  .align-section {
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    height: 95vh;
+    margin-top: -6em;
+    background-color: #ffffff0f;
+    border: solid 1px #ffffff17;
+    backdrop-filter: blur(0.5rem);
+    border-radius: 15px;
+  }
+  .box-class {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: rgrgb(19 21 22 / 18%);
+    border-radius: 20px;
+  }
+  #title-section {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 23px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 17.5px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #ffffff;
+    z-index: 900;
+  }

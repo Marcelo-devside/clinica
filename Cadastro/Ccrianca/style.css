@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
 }
 body{
     background-color: #1C1C26;
@@ -42,9 +43,8 @@ body{
     min-height: 400px;
     max-height: 50vh;
     height: 60vh;
-    background-color: #362d4063;
+    background-color: rgb(42 42 42 / 92%);
     border: solid 1px #868383a1;
-    backdrop-filter: blur(1.35rem);
     margin-left: -385px;
     border-top-style: none;
     border-left-style: none;
@@ -107,3 +107,82 @@ body{
         margin-left: -385px;
     }
 }
+
+/*--------------------------------------------------------------------------------*/
+
+.alignCitizen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #idCitizen-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    height: 66vh;
+    margin-top: -17rem;
+    z-index: 2;
+  }
+  .align-section {
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    height: 66vh;
+    margin-top: -6em;
+    background-color: #ffffff0f;
+    border: solid 1px #ffffff17;
+    backdrop-filter: blur(0.5rem);
+    border-radius: 15px;
+  }
+  .box-class {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: rgrgb(19 21 22 / 18%);
+    border-radius: 20px;
+  }
+  #title-section {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 23px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 17.5px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #ffffff;
+    z-index: 900;
+  }
+  .box-align{
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 70px;
+    }
+    label{
+      margin-left: 5px;
+    }
+  .pergunta{
+    text-align: center;
+    color: #D1E6FF;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  .rotulo{
+    color: #aba8a8;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 22px;
+  }
+  .listagem{
+    width: 60vw;
+    height: 30px;
+    border-radius: 7px;
+    text-align: center;
+    outline: 0;
+  }
+  .align-section, .box-class{
+    transform: matrix3d(180);
+    /* opacity: 0; */
+    transition-duration:5s ;
+  }
