@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #1c1c26;
+  background-color: #7c7c7c;
 }
 .img-background2 {
   position: fixed;
@@ -143,9 +143,9 @@ body {
   display: flex;
   justify-content: center;
   width: 95vw;
-  height: 95vh;
+  height: 100vh;
   margin-top: 25em;
-  background-color: #ffffff0f;
+  background-color: #615a5abe;
   border: solid 1px #ffffff17;
   backdrop-filter: blur(0.5rem);
   border-radius: 15px;
