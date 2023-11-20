@@ -7,7 +7,7 @@
 }
 body{
     background-color: #1C1C26;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .img-background2{
     position: absolute;
@@ -39,8 +39,8 @@ body{
     max-width: 17vw;
     min-width: 300px;
     min-height: 400px;
-    max-height: 50vh;
-    height: 60vh;
+    max-height: 60vh;
+    height: 55vh;
     background-color: rgb(42 42 42 / 92%);
     border: solid 1px #868383a1;
     margin-left: -385px;
@@ -126,8 +126,8 @@ body{
     display: flex;
     justify-content: center;
     width: 95vw;
-    height: 95vh;
-    margin-top: -6em;
+    height: 100vh;
+    margin-top: 25em;
     background-color: #ffffff0f;
     border: solid 1px #ffffff17;
     backdrop-filter: blur(0.5rem);
