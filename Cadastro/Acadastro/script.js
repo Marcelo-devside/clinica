@@ -39,6 +39,17 @@ closeMenu.addEventListener('click', ()=>{
         showMenu.style.display = "block"
     }, 200);
 })
+window.addEventListener('scroll', ()=> {
+    let animation = 'animated'
+    // const alturaPage = window.pageYOffset + ((window.innerHeight * 3) / 4)
+    const alturaPage = window.scrollY
+    console.log(alturaPage)
+    if (alturaPage > 30){
+      showMenu.classList.add("sairMenu")
+    } else {
+        showMenu.classList.remove("sairMenu")
+    }
+})
 //---------------------------------------------------------------------
 //
 cpfId.addEventListener("keyup",()=>{
@@ -183,14 +194,14 @@ function Idade(){
     if(ageinYears=== 0 && ageinMonths === 0 && ageinDaysRemainder === 0){
     legendAge.textContent = 'A criança Nasceu hoje!'
     } else if (ageinYears=== 0 && ageinDaysRemainder === 0){
-            legendAge.innerHTML= `idade: ${ageinMonths} meses`
+            legendAge.textContent= `idade: ${ageinMonths} meses`
         }else if (ageinYears=== 0 && ageinMonths === 0){
-            legendAge.innerHTML= `idade: ${ageinDaysRemainder} dias.`
+            legendAge.textContent= `idade: ${ageinDaysRemainder} dias.`
         } else if (ageinMonths === 0 && ageinDaysRemainder === 0 || ageinMonths === 0){
-            legendAge.innerHTML= `idade: ${ageinYears} anos`
+            legendAge.textContent= `idade: ${ageinYears} anos`
         } else { 
-            legendAge.innerHTML= `${ageinYears} anos`
-        ageinYears < 1 ? legendAge.innerHTML= `idade: ${ageinMonths} meses e ${ageinDaysRemainder} dias.` : legendAge.textContent = `idade: ${ageinYears} anos, ${ageinMonths} meses`
+            legendAge.textContent= `${ageinYears} anos`
+        ageinYears < 1 ? legendAge.textContent= `idade: ${ageinMonths} meses e ${ageinDaysRemainder} dias.` : legendAge.textContent = `idade: ${ageinYears} anos, ${ageinMonths} meses`
         }
 }
     // let today = new Date();

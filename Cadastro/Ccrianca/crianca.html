@@ -23,21 +23,35 @@
         <h3 class="h3-links"><a class="a-links" href="../Bgestante/gestante.html">B - GESTANTE</a></h3>
         <h3 class="h3-links"><a class="a-links" href="../Btuberculose/tuberculose.html">B - TUBERCULOSE</a></h3>
         <h3 class="h3-links"><a class="a-links" href="../Bcronica/cronica.html">B - DOENÇA CRÔNICA</a></h3>
+        <h3 class="h3-links"><a class="a-links" href="../Bidoso/idoso.html">B - IDOSO</a></h3>
     </aside>
     <section class="alignCitizen">
         <section id="idCitizen-section" class="active">
             <div class="align-section">
                 <div class="box-class" >
                     <h1 id="title-section">ACOMPANHAMENTO CRIANÇA</h1>
+                    <!-- ___________________________________________________________________________ -->
+                    <div class="box-align-input">
+                        <div class="align-input">
+                            <label for="nome" class="labelgenericone genericLabel">Nome</label>
+                            <input type="text" name="nome" class="classgenericone genericInput" inputmode= "text" maxlength="29">
+                           
+                        </div>
+                        <div class="align-input">
+                            <label for="bornDate" class="labelgenerictwo genericLabel">DN</label>
+                            <input type="text" name="bornDate" inputmode="numeric" class="classgenerictwo genericInput" maxlength="10">
+                        </div>
+                    </div>
+                    <!-- ____________________________________________________________________________ -->
                     <h4 class="pergunta">Realizou a primeira consulta em até 7 dias?</h4>
                     <div class="box-align">
                         <div class="boxyes1">
-                        <input type="radio" name="resposta" class="resposta1" value = "sim" >
-                        <label for="resposta" class="rotulo">sim</label>
+                        <input type="radio" name="1resposta" class="resposta" id="onerespostayes" value = "sim" >
+                        <label for="1resp" class="rotulo">sim</label>
                         </div>
                         <div class="boxno1">
-                        <input type="radio" name="resposta" class="resposta2" value = "não">
-                        <label for="resposta" class="rotulo">não</label>
+                        <input type="radio" name="1resposta" class="resposta" id="onerespostano"  value = "não">
+                        <label for="1resposta" class="rotulo">não</label>
                         </div>
                     </div>
                     <h4 class="pergunta">Onde dorme a criança?</h4>
@@ -54,13 +68,13 @@
                     </div>
                     <h4 class="pergunta">A criança vem comparecendo às consultas?</h4>
                     <div class="box-align">
-                        <div class="boxyes2">
-                        <input type="radio" name="resposta" class="resposta3" value = "sim" >
-                        <label for="resposta" class="rotulo">sim</label>
+                        <div class="boxyes2" >
+                        <input type="radio" name="2resposta" class="resposta" id="tworespostayes" value = "sim" >
+                        <label for="2resposta" class="rotulo">sim</label>
                         </div>
-                        <div class="boxno2">
-                        <input type="radio" name="resposta" class="resposta4" value = "não">
-                        <label for="resposta" class="rotulo">não</label>
+                        <div class="boxno2" >
+                        <input type="radio" name="2resposta" class="tworespostano" value = "não">
+                        <label for="2resposta"  class="rotulo" >não</label>
                         </div>
                     </div>
                 </div>

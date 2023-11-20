@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Space+Grotesk:wght@300;500;700&display=swap');
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Space Grotesk", sans-serif;
 }
 body{
     background-color: #1C1C26;
@@ -24,7 +23,6 @@ body{
 }
 #title{
     color: #000;
-    text-align: center;
     text-align: center;
     font-size: 4vw;
     font-family: 'Roboto', sans-serif;
@@ -108,7 +106,7 @@ body{
     }
 }
 
-/*--------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
 
 .alignCitizen {
     display: flex;
@@ -128,8 +126,8 @@ body{
     display: flex;
     justify-content: center;
     width: 95vw;
-    height: 67vh;
-    margin-top: -5em;
+    height: 95vh;
+    margin-top: -6em;
     background-color: #ffffff0f;
     border: solid 1px #ffffff17;
     backdrop-filter: blur(0.5rem);
@@ -154,109 +152,3 @@ body{
     color: #ffffff;
     z-index: 900;
   }
-  .box-align{
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 70px;
-    }
-    label{
-      margin-left: 5px;
-    }
-  .pergunta{
-    text-align: center;
-    color: #D1E6FF;
-    padding-bottom: 20px;
-    letter-spacing: 1px;
-  }
-  .rotulo{
-    color: #aba8a8;
-    font-weight: 800;
-    letter-spacing: 2px;
-    font-size: 22px;
-  }
-  .listagem{
-    width: 60vw;
-    height: 30px;
-    border-radius: 7px;
-    text-align: center;
-    outline: 0;
-  }
-  .align-section, .box-class{
-    transform: matrix3d(180);
-    transition-duration:5s ;
-  }
-  input {
-    appearance: none;
-  
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-  
-    border: 2px solid #999;
-    transition: 0.2s all linear;
-    margin-right: 5px;
-  
-    position: relative;
-    top: 4px;
-  }
-  
-  input:checked {
-    border: 6px solid #ee8829;
-  }
-  
-  button,
-  legend {
-    color: white;
-    background-color: black;
-    padding: 5px 10px;
-    border-radius: 0;
-    border: 0;
-    font-size: 14px;
-  }
-  
-  button:hover,
-  button:focus {
-    color: #999;
-  }
-  
-  button:active {
-    background-color: white;
-    color: black;
-    outline: 1px solid black;
-  }
-  /* _______________________________________________________________________________________ */
-  .labelgenericone, .labelgenerictwo{
-    color: #D1E6FF;
-  }
-  .box-align-input {
-    display: flex;
-    justify-content: space-between;
-    gap: 5px;
-  }
-  .classgenericone{
-    text-transform: uppercase;
-    width: 59vw;
-    border-radius: 0px;
-    margin-bottom: 27px;
-    font-weight: 600;
-    height: 20px;
-  }
-  .classgenerictwo{
-    width: 18vw;
-    border-radius: 0px;
-    margin-bottom: 27px;
-    font-weight: 600;
-    height: 20px;
-  }
-  .genericInput {
-    font-family: "Inter", sans-serif;
-    background-color: #e0080800;
-    border-bottom: solid 2px rgb(189, 186, 186);
-    border-right: 0;
-    border-top: 0;
-    border-left: 0;
-    outline: 0;
-    color: #999;
-  }
-
-  /* _______________________________________________________________________________________ */

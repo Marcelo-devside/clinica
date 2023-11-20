@@ -54,7 +54,7 @@ body {
   min-width: 300px;
   min-height: 400px;
   max-height: 60vh;
-  height: 47vh;
+  height: 53vh;
   background-color: rgb(42 42 42 / 92%);
   border: solid 1px #868383a1;
   margin-left: -350px;
@@ -340,6 +340,15 @@ body {
   .legend_age {
     font-size: 3vw;
   }
+}
+.animated {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+
+}
+.sairMenu {
+  
+  transition: .1ms linear;
 }
 
 /* ------------------------------------------------------------------ */
