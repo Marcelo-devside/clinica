@@ -1,6 +1,8 @@
 const showMenu = document.querySelector('#menu-popup')
 const closeMenu = document.querySelector('#menu-close')
 const barraLateral = document. querySelector('.barra-lateral')
+const bornDate = document. querySelector('.classgenerictwo')
+
 showMenu.addEventListener('click', ()=>{
     setTimeout(() => {
         showMenu.style.display = "none"
@@ -24,4 +26,13 @@ window.addEventListener('scroll', ()=> {
         barraLateral.classList.add("closedMenu")
         showMenu.style.display = "initial"
     } 
+})
+
+bornDate.addEventListener("input", (e) => {
+    e.currentTarget.maxLength = 10
+    let value = e.currentTarget.value
+    value = value.replace(/\D/g, "")
+    .replace(/(\d{2})+(\d{2})+(\d{4})/g, "$1/$2/$3")
+    e.currentTarget.value = value
+    return e
 })
