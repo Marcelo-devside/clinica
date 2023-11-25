@@ -19,14 +19,14 @@ closeMenu.addEventListener('click', ()=>{
 })
 // _________________________________________________________________________________________
 
-window.addEventListener('scroll', ()=> {
-       const alturaPage2 = window.scrollY 
-    console.log(alturaPage2)
-     if (alturaPage2 > 1 &&  showMenu.style.display == "none"){
-        barraLateral.classList.add("closedMenu")
-        showMenu.style.display = "initial"
-    } 
-})
+// window.addEventListener('scroll', ()=> {
+//        const alturaPage2 = window.scrollY 
+//     console.log(alturaPage2)
+//      if (alturaPage2 > 1 &&  showMenu.style.display == "none"){
+//         barraLateral.classList.add("closedMenu")
+//         showMenu.style.display = "initial"
+//     } 
+// })
 
 bornDate.addEventListener("input", (e) => {
     e.currentTarget.maxLength = 10

@@ -5,6 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Space Grotesk", sans-serif;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
 }
 body{
     background-color: #1C1C26;
@@ -13,6 +17,8 @@ body{
 .img-background2{
   position: absolute;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   width: 100vw;
   height: 125vh;
 }
@@ -42,12 +48,12 @@ body{
   z-index: 1500;
 }
 .barra-lateral{
-  position: relative;
+  position: fixed;
   max-width: 17vw;
   min-width: 300px;
   min-height: 400px;
-  max-height: 70vh;
-  height: 66vh;
+  /* max-height: 70vh; */
+  height: 100vh;
   background-color: rgb(42 42 42 / 92%);
   border: solid 1px #868383a1;
   margin-left: -385px;
@@ -135,7 +141,7 @@ body{
     justify-content: center;
     width: 95vw;
     height: 100vh;
-    margin-top: -5em;
+    margin-top: 45em;
     background-color: #ffffff0f;
     border: solid 1px #ffffff17;
     backdrop-filter: blur(0.5rem);
@@ -240,15 +246,15 @@ body{
     gap: 5px;
   }
   .classgenericone{
-    text-transform: uppercase;
-    width: 59vw;
+    text-transform: capitalize;
+    width: 57vw;
     border-radius: 0px;
     margin-bottom: 27px;
     font-weight: 600;
     height: 20px;
   }
   .classgenerictwo{
-    width: 18vw;
+    width: 19vw;
     border-radius: 0px;
     margin-bottom: 27px;
     font-weight: 600;

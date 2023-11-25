@@ -14,13 +14,13 @@ body {
   background-color: #7c7c7c;
 }
 .img-background2 {
-  position: fixed;
+  position: absolute;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   filter: grayscale(40%);
   width: 100vw;
-  height: 100vh;
+  height: 125vh;
   z-index: 1;
 }
 #box {
@@ -53,8 +53,8 @@ body {
   max-width: 17vw;
   min-width: 300px;
   min-height: 400px;
-  max-height: 60vh;
-  height: 55vh;
+  /* max-height: 60vh; */
+  height: 100vh;
   background-color: rgb(42 42 42 / 92%);
   border: solid 1px #868383a1;
   margin-left: -350px;
