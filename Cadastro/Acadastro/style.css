@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #7c7c7c;
+  background-color: #1C1C26;
 }
 .img-background2 {
   position: absolute;
@@ -28,7 +28,7 @@ body {
   position: fixed;
   justify-content: center;
   align-items: center;
-  background-color: #f19408;
+  background-color: #FF7800;
   width: 100vw;
   padding: 1px 0px;
   z-index: 1300;
@@ -54,7 +54,7 @@ body {
   min-width: 300px;
   min-height: 400px;
   /* max-height: 60vh; */
-  height: 100vh;
+  height: 80vh;
   background-color: rgb(42 42 42 / 92%);
   border: solid 1px #868383a1;
   margin-left: -350px;
@@ -147,8 +147,9 @@ body {
   width: 95vw;
   height: 100vh;
   margin-top: 25em;
-  background-color: #615a5abe;
-  border: solid 1px #ffffff17;
+  background-color: #ffffff0f;
+  /* border: solid 1px #ffffff17; */
+  border: solid 1px #FF7800;
   backdrop-filter: blur(0.5rem);
   border-radius: 15px;
 }
@@ -168,7 +169,7 @@ body {
   line-height: 30px;
   font-weight: 700;
   letter-spacing: 4px;
-  color: #ffffff;
+  color: #1BFBC8;
   z-index: 900;
 }
 .box-align-input {
@@ -207,7 +208,7 @@ body {
   letter-spacing: 0.05rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: rgb(189, 186, 186);
+  color: #D1E6FF;
   width: 155px;
   animation: animateClickOut 10ms linear;
 }
@@ -216,7 +217,7 @@ body {
   font-size: 0.9em;
   letter-spacing: 0.2rem;
   background-color: #e0080800;
-  border-bottom: solid 2px rgb(189, 186, 186);
+  border-bottom: solid 2px #D1E6FF;
   border-right: 0;
   border-top: 0;
   border-left: 0;
@@ -251,7 +252,7 @@ body {
   margin-top: -45px;
   font-size: 2.5vw;
   letter-spacing: 1.2px;
-  color: yellow;
+  color: #D1E6FF;;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .happyBirthday {
@@ -293,19 +294,19 @@ body {
   /* margin-left: calc(0.05rem + 0.2rem); */
   font-weight: 800;
   width: 104px;
-  color: #ffffff;
+  color: #D1E6FF;;
   animation: animateClick 10ms linear;
 }
 @keyframes animateClick {
   0% {
     margin-top: -3px;
     transform: scale(0.57);
-    color: rgb(189, 186, 186);
+    color: #D1E6FF;;
   }
   50% {
     margin-top: -6px;
     transform: scale(0.55);
-    color: rgb(189, 186, 186);
+    color: #D1E6FF;;
   }
   100% {
     margin-top: -10px;

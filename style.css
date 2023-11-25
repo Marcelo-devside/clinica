@@ -16,9 +16,8 @@ body{
     height: 100vh;
 }
 #title-main{
-    background-color:  #f19408;
+    background-color:  #FF7800;
     font-family: 'Roboto', sans-serif;
-    z-index: 200;
 }
 #title-main-h1{
     text-align: center;
@@ -28,7 +27,7 @@ body{
 }
 #menu-popup{
     position: fixed;
-    margin-top: 20px;
+    margin-top: 22px;
     margin-left: 20px;
     width: 30px;
 }
@@ -37,11 +36,10 @@ body{
     max-width: 17vw;
     min-width: 300px;
     min-height: 400px;
-    max-height: 60vh;
-    height: 60vh;
-    background-color: #362d4063;
+    /* max-height: 60vh; */
+    height: 80vh;
+    background-color: rgb(42 42 42 / 92%);
     border: solid 1px #868383a1;
-    backdrop-filter: blur(1.35rem);
     margin-left: -385px;
     border-top-style: none;
     border-left-style: none;
@@ -94,7 +92,6 @@ body{
 .closedMenu{
     animation: movingMenuClose 0.3s;
     margin-left: -385px;
-
 }
 @keyframes movingMenuClose {
     0%{
