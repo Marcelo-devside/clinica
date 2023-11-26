@@ -36,3 +36,12 @@ bornDate.addEventListener("input", (e) => {
     e.currentTarget.value = value
     return e
 })
+window.addEventListener('scroll', ()=> {
+    const alturaPage2 = window.scrollY 
+ console.log(alturaPage2)
+  if (alturaPage2 > 1 ){
+    showMenu.style.display = "none"
+  } else{
+    showMenu.style.display = "block"
+ } 
+})

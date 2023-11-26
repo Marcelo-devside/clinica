@@ -1,4 +1,4 @@
-const showMenu = document.querySelector('#menu-popup')
+const sairMenu = document.querySelector('#menu-popup')
 const closeMenu = document.querySelector('#menu-close')
 const labelCpf = document.querySelector('.label-cpf')
 const labelBorn = document.querySelector('.label-born')
@@ -25,9 +25,9 @@ const legendAge = document.querySelector('.legend_age')
 
 //-------------------------------------------------------------------------
 //Abrir e fechar menu
-showMenu.addEventListener('click', ()=>{
+sairMenu.addEventListener('click', ()=>{
     setTimeout(() => {
-        showMenu.style.display = "none"
+        sairMenu.style.display = "none"
     }, 60);
     barraLateral.classList.remove("closedMenu")
     barraLateral.classList.add("menu-show")
@@ -36,7 +36,7 @@ closeMenu.addEventListener('click', ()=>{
     barraLateral.classList.remove("menu-show")
     barraLateral.classList.add("closedMenu")
     setTimeout(() => {
-        showMenu.style.display = "block"
+        sairMenu.style.display = "block"
     }, 200);
 })
 window.addEventListener('scroll', ()=> {
@@ -45,9 +45,9 @@ window.addEventListener('scroll', ()=> {
     const alturaPage = window.scrollY
     console.log(alturaPage)
     if (alturaPage > 30){
-      showMenu.classList.add("sairMenu")
+      sairMenu.classList.add("sairMenu")
     } else {
-        showMenu.classList.remove("sairMenu")
+        sairMenu.classList.remove("sairMenu")
     }
 })
 //---------------------------------------------------------------------
@@ -617,3 +617,12 @@ let qtdDigitosCpf = cpfId.value.length
                 labelUf.classList.replace('genericLabelIsLater','label_uf')
         }
 })
+window.addEventListener('scroll', ()=> {
+        const alturaPage2 = window.scrollY 
+     console.log(alturaPage2)
+      if (alturaPage2 > 1 ){
+        sairMenu.style.display = "none"
+      } else{
+        sairMenu.style.display = "block"
+     } 
+ })

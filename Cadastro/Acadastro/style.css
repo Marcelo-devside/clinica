@@ -228,6 +228,7 @@ body {
 }
 .cpf-id {
   width: 175px;
+  font-size: 3.2vw;
   animation: animateClickOut 10ms linear;
 }
 .uf_input {
@@ -257,6 +258,7 @@ body {
 }
 .happyBirthday {
   width: 100%;
+  font-size: 3.1vw;
   animation: animateClickOut 10ms linear;
 }
 @keyframes animateClickOut {
@@ -325,6 +327,7 @@ body {
   }
   .cpf-id {
     width: 140px;
+    font-size: 3.4vw;
   }
   #verific {
     margin-left: 133px;
@@ -350,7 +353,6 @@ body {
 
 }
 .sairMenu {
-  
   transition: .1ms linear;
 }
 
