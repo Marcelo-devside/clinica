@@ -22,7 +22,7 @@ const barraLateral = document. querySelector('.barra-lateral')
 const verificado = document.querySelector('#verific')
 const errorDetect = document.querySelector('#error-detect')
 const legendAge = document.querySelector('.legend_age')
-
+let errorCpf = document.querySelector('.cpferror')
 //-------------------------------------------------------------------------
 //Abrir e fechar menu
 sairMenu.addEventListener('click', ()=>{
@@ -53,9 +53,15 @@ window.addEventListener('scroll', ()=> {
 //---------------------------------------------------------------------
 //
 cpfId.addEventListener("keyup",()=>{
-    if(cpfId.value.length == 14){
-        labelBorn.classList.replace('label-born','genericLabelIsLater')
-        bornDate.focus()
+    if(cpfId.value.length !== 14){
+        // labelBorn.classList.replace('label-born','genericLabelIsLater')
+
+        // bornDate.focus()
+    
+        cpfId.style.color = '#ffffff'
+        cpfId.style.borderBottom = 'solid 2px #D1E6FF';
+        errorCpf.innerText = ""
+        // errorCpf.style.display = 'none';
     }
 })
 resildencialInput.addEventListener("keyup",()=>{
@@ -164,13 +170,14 @@ function Idade(){
     let nascimento = document.querySelector('.happyBirthday').value
     let nascimentoFormat = nascimento.replace(/[/]/g, "");
     console.log("nascimentoFormat", nascimentoFormat)
-    let ano_nascimento = nascimentoFormat.substring(4, 8)
+    let ano_nascimento = Number(nascimentoFormat.substring(4, 8))
     console.log("ano do nascimento", ano_nascimento)
-    let mes_nascimento = nascimentoFormat.substring(2, 4)
+    let mes_nascimento = Number(nascimentoFormat.substring(2, 4))
     console.log("mês do nascimento", mes_nascimento)
-    let dia_nascimento = nascimentoFormat.substring(0, 2)
+    let dia_nascimento = Number(nascimentoFormat.substring(0, 2))
     console.log("dia do nascimento", dia_nascimento)
     dataNasc = Date.parse(`${mes_nascimento} ${dia_nascimento} ${ano_nascimento}`)
+    console.log("dataNasc", dataNasc);
     const today = new Date()
     console.log("today", today)
     const  birthdate = new Date(dataNasc)
@@ -178,12 +185,19 @@ function Idade(){
     const ageinMiliseconds = today - birthdate 
     console.log("ageinMiliseconds", ageinMiliseconds)
     const ageinSeconds = ageinMiliseconds / 1000
+    console.log("ageinSeconds", ageinSeconds );
     const ageinMinutes = ageinSeconds / 60
+    console.log("ageinMinutes", ageinMinutes);
     const ageinHours = ageinMinutes / 60
+    console.log("ageinHours", ageinHours);
     const ageinDays = ageinHours / 24
+    console.log("ageinDays", ageinDays);
     const numberageinYears = Math.floor(ageinDays / 365.25)
+    console.log("numberageinYears", numberageinYears);
     const numberageinMonths = Math.floor((ageinDays % 365.25) / 30.44)
+    console.log("numberageinMonths", numberageinMonths);
     const numberageinDaysRemainder = Math.floor(ageinDays % 365.25 % 30.44)
+    console.log("numberageinDaysRemainder", numberageinDaysRemainder);
     const ageinYears = numberageinYears
     console.log("ageinYears", ageinYears)
     const ageinMonths = numberageinMonths
@@ -489,6 +503,7 @@ patientInput.addEventListener("input", (e) => {
 })
 bornDate.addEventListener("input", (e) => {
     e.currentTarget.maxLength = 10
+    // municipioInput.focus()
     let value = e.currentTarget.value
     value = value.replace(/\D/g, "")
     .replace(/(\d{2})+(\d{2})+(\d{4})/g, "$1/$2/$3")
@@ -506,15 +521,19 @@ cpfId.addEventListener("input", (e) => {
                 const resultadoValidacao = validaCPF(cpf);
                 
                 if (resultadoValidacao == true) {
+                    labelBorn.classList.replace('label-born','genericLabelIsLater')
                     setTimeout(() => {
+                        bornDate.focus()
                         verificado.style.display = 'block';
                         errorDetect.style.display = 'none';
                     }, 600);
                 } else {
                     setTimeout(() => {
+                        cpfId.style.borderBottom = 'solid 2px rgb(184, 1, 1)';
+                        errorCpf.innerText = "Este CPF não existe";
                         errorDetect.style.display = 'block';
                         verificado.style.display = 'none';
-                    }, 600);
+                    }, 300);
                 }
     } else {
         labelCpf.innerHTML=`<label>DNV</label>`
@@ -586,28 +605,88 @@ if( qtdDigitosCpf == 14){
              if(valorUf == '0'){
                 setTimeout(() => {
                     labelUf.classList.replace('label_uf','genericLabelIsLater')
-                    ufInput.value = "RS"
+                    ufInput.innerHTML = `<option value="RS">RS</option>`
                     
                 }, 1000);
-             } else if(valorUf == '8'){
+             }else if(valorUf == '1'){
                 setTimeout(() => {
                     labelUf.classList.replace('label_uf','genericLabelIsLater')
-                    ufInput.value = "SP"
+                    ufInput.innerHTML = `<option value="DF">DF</option>
+                                         <option value="GO">GO</option>
+                                         <option value="MS">MS</option>
+                                         <option value="MT">MT</option>
+                                         <option value="TO">TO</option>
+                                        `
+                    
+                }, 1000); 
+            }else if(valorUf == '2'){
+                setTimeout(() => {
+                    labelUf.classList.replace('label_uf','genericLabelIsLater')
+                    ufInput.innerHTML = `<option value="AC">AC</option>
+                                         <option value="AM">AM</option>
+                                         <option value="AP">AP</option>
+                                         <option value="PA">PA</option>
+                                         <option value="RO">RO</option>
+                                         <option value="RR">RR</option>
+                                        `
+                    
+                }, 1000); 
+            }else if(valorUf == '3'){
+                setTimeout(() => {
+                    labelUf.classList.replace('label_uf','genericLabelIsLater')
+                    ufInput.innerHTML = `<option value="CE">CE</option>
+                                         <option value="MA">MA</option>
+                                         <option value="PI">PI</option>
+                                        `
+                    
+                }, 1000); 
+            }else if(valorUf == '4'){
+                setTimeout(() => {
+                    labelUf.classList.replace('label_uf','genericLabelIsLater')
+                    ufInput.innerHTML = `<option value="AL">AL</option>
+                                         <option value="PB">PB</option>
+                                         <option value="PE">PE</option>
+                                         <option value="RN">RN</option>
+                                        `
+                    
+                }, 1000); 
+            }else if(valorUf == '5'){
+                setTimeout(() => {
+                    labelUf.classList.replace('label_uf','genericLabelIsLater')
+                    ufInput.innerHTML = `<option value="BA">BA</option>
+                                         <option value="SE">SE</option>
+                                        `
+                    
+                }, 1000); 
+            }else if(valorUf == '8'){
+                setTimeout(() => {
+                    labelUf.classList.replace('label_uf','genericLabelIsLater')
+                    ufInput.innerHTML = `<option value="SP">SP</option>`
                     
                 }, 1000);
              } else if(valorUf == '7'){
                 setTimeout(() => {
                     labelUf.classList.replace('label_uf','genericLabelIsLater')
-                    ufInput.value = "RJ"
+                    ufInput.innerHTML = `<option value="RJ">RJ</option>
+                                         <option value="ES">ES</option>
+                                        `
                     
                 }, 1000);
              } else if(valorUf == '6'){
                 setTimeout(() => {
                     labelUf.classList.replace('label_uf','genericLabelIsLater')
-                    ufInput.value = "MG"
+                    ufInput.innerHTML = `<option value="MG">MG</option>`
                     
                 }, 1000);
-             } 
+             }else if(valorUf == '9'){
+                setTimeout(() => {
+                    labelUf.classList.replace('label_uf','genericLabelIsLater')
+                    ufInput.innerHTML = `<option value="PR">PR</option>
+                                         <option value="SC">SC</option>
+                                        `
+                    
+                }, 1000); 
+            } 
     } 
 } 
 cpfId.addEventListener("keyup", () => {
@@ -615,6 +694,9 @@ let qtdDigitosCpf = cpfId.value.length
         if( qtdDigitosCpf != 14){
                 ufInput.value = ""
                 labelUf.classList.replace('genericLabelIsLater','label_uf')
+                cpfId.style.color = '#ffffff'
+                cpfId.style.borderBottom = 'solid 2px #D1E6FF';
+                errorCpf.innerText = ""
         }
 })
 window.addEventListener('scroll', ()=> {

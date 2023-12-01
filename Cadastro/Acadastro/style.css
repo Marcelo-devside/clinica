@@ -177,13 +177,18 @@ body {
   justify-content: space-between;
   gap: 24px;
 }
-/* .error-cpf {
-    border-bottom: solid 2px rgb(184, 1, 1);
+ .cpferror {
+  position: absolute;
+  margin-top: -45px;
+  font-size: 2.5vw;
+  letter-spacing: 1.2px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color:yellow;
     z-index: 48;
-} */
+}
 #verific {
   position: absolute;
-  margin-left: 157px;
+  margin-left: 154px;
   margin-top: -74px;
   width: 16px;
   display: none;
@@ -191,7 +196,7 @@ body {
 }
 #error-detect {
   position: absolute;
-  margin-left: 157px;
+  margin-left: 154px;
   margin-top: -74px;
   width: 17px;
   display: none;
@@ -234,6 +239,7 @@ body {
 .uf_input {
   width: 50px;
   animation: animateClickOut 10ms linear;
+  background-color: #2d2d36;
 }
 .municipio_input {
   width: 100%;
@@ -330,10 +336,10 @@ body {
     font-size: 3.4vw;
   }
   #verific {
-    margin-left: 133px;
+    margin-left: 125px;
   }
   #error-detect {
-    margin-left: 133px;
+    margin-left: 125px;
   }
   .legend_age {
     font-size: 3.1vw;
